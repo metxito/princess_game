@@ -1,115 +1,52 @@
 fileFormatVersion: 2
-guid: 79c4fcca1b012ec4f953549d2a21b483
+guid: d72e83c25cf6f5c4493afae8e05c0499
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6542448547741018177
-    second: tilemap_torre_0
+      213: -2175913036344952088
+    second: tilemap_suelo_0
   - first:
-      213: -4032484982359193257
-    second: tilemap_torre_1
+      213: -4609048692073526256
+    second: tilemap_suelo_1
   - first:
-      213: 1742876562055445086
-    second: tilemap_torre_2
+      213: -2549928844481568157
+    second: tilemap_suelo_2
   - first:
-      213: 1156896189950687992
-    second: tilemap_torre_3
+      213: -1149596071356799282
+    second: tilemap_suelo_3
   - first:
-      213: -8479914334951327876
-    second: tilemap_torre_4
+      213: -5392154205120630350
+    second: tilemap_suelo_4
   - first:
-      213: -110222769107363686
-    second: tilemap_torre_0
+      213: 8943629439193781161
+    second: tilemap_suelo_5
   - first:
-      213: -1052701191740707697
-    second: tilemap_torre_1
+      213: 1283544484524074204
+    second: tilemap_suelo_6
   - first:
-      213: -4908596976615210001
-    second: tilemap_torre_2
+      213: -1782609773123965298
+    second: tilemap_suelo_7
   - first:
-      213: -5447365901735470945
-    second: tilemap_torre_3
+      213: 4244377017128107294
+    second: tilemap_suelo_8
   - first:
-      213: -4684622455028710185
-    second: tilemap_torre_4
+      213: 6606395973005609612
+    second: tilemap_suelo_9
   - first:
-      213: 5849758030336156012
-    second: tilemap_torre_5
+      213: 5031409265172165833
+    second: tilemap_suelo_10
   - first:
-      213: -199861108828504572
-    second: tilemap_torre_6
+      213: -3494632013374579589
+    second: tilemap_suelo_11
   - first:
-      213: 2124805032984189432
-    second: tilemap_torre_7
+      213: 2495206818421772692
+    second: tilemap_suelo_12
   - first:
-      213: -7676963889228142812
-    second: tilemap_torre_8
+      213: -3875857023902286670
+    second: tilemap_suelo_13
   - first:
-      213: -6387831921401543073
-    second: tilemap_torre_5
-  - first:
-      213: -7535482994537829491
-    second: tilemap_torre_6
-  - first:
-      213: 7443711955264460202
-    second: tilemap_torre_7
-  - first:
-      213: 180853000242755683
-    second: tilemap_torre_8
-  - first:
-      213: -6217251438087462675
-    second: tilemap_torre_9
-  - first:
-      213: -5681389803757024554
-    second: tilemap_torre_10
-  - first:
-      213: -194710364220290102
-    second: tilemap_torre_11
-  - first:
-      213: 3574707411893203280
-    second: tilemap_torre_9
-  - first:
-      213: -8963185235746455010
-    second: tilemap_torre_10
-  - first:
-      213: -4697398799775416433
-    second: tilemap_torre_11
-  - first:
-      213: 564906366492191355
-    second: tilemap_torre_12
-  - first:
-      213: -9075373120543224399
-    second: tilemap_torre_13
-  - first:
-      213: -8183376869839784291
-    second: tilemap_torre_14
-  - first:
-      213: -1912382745960432664
-    second: tilemap_torre_15
-  - first:
-      213: -7416836162065282606
-    second: tilemap_torre_12
-  - first:
-      213: 8874773634955078380
-    second: tilemap_torre_13
-  - first:
-      213: -3323557818192514157
-    second: tilemap_torre_14
-  - first:
-      213: -1340323624023825948
-    second: tilemap_torre_15
-  - first:
-      213: 693341407808392788
-    second: tilemap_torre_16
-  - first:
-      213: -1661102249440932751
-    second: tilemap_torre_17
-  - first:
-      213: 716944496267148811
-    second: tilemap_torre_18
-  - first:
-      213: 9068204629347875977
-    second: tilemap_torre_19
+      213: 2791799755475561930
+    second: tilemap_suelo_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -195,7 +132,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tilemap_torre_0
+      name: tilemap_suelo_0
       rect:
         serializedVersion: 2
         x: 0
@@ -209,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a981239b9f8687ef0800000000000000
-      internalID: -110222769107363686
+      spriteID: 8ea74863f9a9dc1e0800000000000000
+      internalID: -2175913036344952088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_torre_1
+      name: tilemap_suelo_1
       rect:
         serializedVersion: 2
         x: 32
@@ -230,14 +167,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8c2aa3f7dd0461f0800000000000000
-      internalID: -1052701191740707697
+      spriteID: 01c8a7462ae5900c0800000000000000
+      internalID: -4609048692073526256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_torre_2
+      name: tilemap_suelo_2
       rect:
         serializedVersion: 2
         x: 64
@@ -251,203 +188,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe34b4f7e0921ebb0800000000000000
-      internalID: -4908596976615210001
+      spriteID: 362672ed935dc9cd0800000000000000
+      internalID: -2549928844481568157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_torre_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d4023582b0ecfeb0800000000000000
-      internalID: -4684622455028710185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilemap_torre_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f56c5ff26bcd957a0800000000000000
-      internalID: -6387831921401543073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilemap_torre_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8b639324269c6790800000000000000
-      internalID: -7535482994537829491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilemap_torre_8
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 368780478d4828200800000000000000
-      internalID: 180853000242755683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilemap_torre_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 051b9d59379eb9130800000000000000
-      internalID: 3574707411893203280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilemap_torre_10
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e128e4f548e5c9380800000000000000
-      internalID: -8963185235746455010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilemap_torre_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d9c3d28eca121990800000000000000
-      internalID: -7416836162065282606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilemap_torre_13
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ceaef75b997892b70800000000000000
-      internalID: 8874773634955078380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilemap_torre_14
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 393b928f5c950e1d0800000000000000
-      internalID: -3323557818192514157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilemap_torre_3
+      name: tilemap_suelo_3
       rect:
         serializedVersion: 2
         x: 0
@@ -461,14 +209,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fa730c84fe1e0010800000000000000
-      internalID: 1156896189950687992
+      spriteID: ec6e793c670db00f0800000000000000
+      internalID: -1149596071356799282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_torre_7
+      name: tilemap_suelo_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1f7adb1583b25b0800000000000000
+      internalID: -5392154205120630350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_suelo_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a31fdde6972e1c70800000000000000
+      internalID: 8943629439193781161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_suelo_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4287d78e010d110800000000000000
+      internalID: 1283544484524074204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_suelo_7
       rect:
         serializedVersion: 2
         x: 32
@@ -482,14 +293,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f91cf77be2dc7d10800000000000000
-      internalID: 2124805032984189432
+      spriteID: e8e6ec32bd5e247e0800000000000000
+      internalID: -1782609773123965298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_torre_11
+      name: tilemap_suelo_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1db0cec86e07ea30800000000000000
+      internalID: 4244377017128107294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_suelo_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a0290a222aeab50800000000000000
+      internalID: 6606395973005609612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_suelo_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c43232b11823d540800000000000000
+      internalID: 5031409265172165833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_suelo_11
       rect:
         serializedVersion: 2
         x: 64
@@ -503,8 +377,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acb009294ff3c4df0800000000000000
-      internalID: -194710364220290102
+      spriteID: b7c991ef2b2908fc0800000000000000
+      internalID: -3494632013374579589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_suelo_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49199259161c0a220800000000000000
+      internalID: 2495206818421772692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_suelo_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bcf91a6290363ac0800000000000000
+      internalID: -3875857023902286670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_suelo_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acda42506177eb620800000000000000
+      internalID: 2791799755475561930
       vertices: []
       indices: 
       edges: []
