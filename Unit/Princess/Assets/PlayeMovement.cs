@@ -13,6 +13,8 @@ public class PlayeMovement : MonoBehaviour
     private float horizontalMove = 0f;
     private bool jump = false;
     private bool crunch = false;
+    private float prev_y = -9999f;
+    private bool landing = false;
 
     // Update is called once per frame
     void Update()
@@ -26,6 +28,8 @@ public class PlayeMovement : MonoBehaviour
             animator.SetBool("IsJumping", true);
         }
 
+        
+
         if (Input.GetButtonDown("Crunch"))
         {
             crunch = true;
@@ -36,17 +40,31 @@ public class PlayeMovement : MonoBehaviour
         }
     }
 
-
     void FixedUpdate()
     {
+        if (!animator.GetBool("Landing") && prev_y - transform.position.y > 0.001)
+        {
+            animator.SetBool("Landing", true);
+            animator.SetBool("IsJumping", false);
+        }
+        else if (animator.GetBool("Landing") && prev_y - transform.position.y < 0.01)
+        {
+            animator.SetBool("Landing", false);
+        }
+        prev_y = transform.position.y;
         ccontroler.Move(horizontalMove * Time.fixedDeltaTime, crunch, jump);
         jump = false;
-
     }
 
     public void OnLanding()
     {
-        Debug.Log("atterrizo");
-        animator.SetBool("IsJumping", false);
+        Debug.Log("landing");
+        
+        animator.SetBool("IsJumping", false);        
+    }
+
+    public void OutCrunched(bool crunched)
+    {
+        animator.SetBool("IsCrunched", crunched);
     }
 }

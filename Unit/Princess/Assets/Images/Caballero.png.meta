@@ -32,6 +32,15 @@ TextureImporter:
   - first:
       213: -3461022611283642091
     second: Caballero_5
+  - first:
+      213: -5182434287925521843
+    second: Caballero_4
+  - first:
+      213: -6633840186317350216
+    second: Caballero_5
+  - first:
+      213: -3294396917730516963
+    second: Caballero_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -72,7 +81,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -162,8 +171,8 @@ TextureImporter:
       name: Caballero_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 50
+        x: 100
+        y: 100
         width: 50
         height: 50
       alignment: 0
@@ -183,7 +192,7 @@ TextureImporter:
       name: Caballero_3
       rect:
         serializedVersion: 2
-        x: 50
+        x: 0
         y: 50
         width: 50
         height: 50
@@ -204,6 +213,48 @@ TextureImporter:
       name: Caballero_4
       rect:
         serializedVersion: 2
+        x: 50
+        y: 50
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42156c097b4418b0800000000000000
+      internalID: -5182434287925521843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caballero_5
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 50
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bad7d58f7ddfe3a0800000000000000
+      internalID: -6633840186317350216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caballero_6
+      rect:
+        serializedVersion: 2
         x: 0
         y: 0
         width: 50
@@ -215,29 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f6ade0a52c472290800000000000000
-      internalID: -7915274095582927118
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Caballero_5
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 0
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 519f7d6b54af7ffc0800000000000000
-      internalID: -3461022611283642091
+      spriteID: d10e7813573f742d0800000000000000
+      internalID: -3294396917730516963
       vertices: []
       indices: 
       edges: []
