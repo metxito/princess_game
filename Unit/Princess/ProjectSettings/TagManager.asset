@@ -13,13 +13,13 @@ TagManager:
   - UI
   - 
   - 
-  - Suelo
+  - background
+  - tower
+  - player
+  - grass
+  - foreground
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - post_processing
   - 
   - 
   - 
