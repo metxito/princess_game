@@ -14,7 +14,7 @@ public class PlayeMovement : MonoBehaviour
     private bool jump = false;
     private bool crunch = false;
     private float prev_y = -9999f;
-    private bool landing = false;
+    //private bool landing = false;
 
     // Update is called once per frame
     void Update()
@@ -26,9 +26,7 @@ public class PlayeMovement : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsJumping", true);
-        }
-
-        
+        }        
 
         if (Input.GetButtonDown("Crunch"))
         {
@@ -42,15 +40,16 @@ public class PlayeMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!animator.GetBool("Landing") && prev_y - transform.position.y > 0.001)
-        {
-            animator.SetBool("Landing", true);
-            animator.SetBool("IsJumping", false);
-        }
-        else if (animator.GetBool("Landing") && prev_y - transform.position.y < 0.01)
-        {
-            animator.SetBool("Landing", false);
-        }
+
+        //if (!animator.GetBool("Landing") && prev_y - transform.position.y > 0.5)
+        //{
+        //    Debug.Log("prev_y: " + prev_y.ToString() + "    position.y: " + transform.position.y.ToString() + "     dif: " + (prev_y - transform.position.y).ToString());
+        //    animator.SetBool("Landing", true);
+        //    animator.SetBool("IsJumping", false);
+        //}
+        //else 
+        //    animator.SetBool("Landing", false);
+
         prev_y = transform.position.y;
         ccontroler.Move(horizontalMove * Time.fixedDeltaTime, crunch, jump);
         jump = false;
@@ -58,8 +57,7 @@ public class PlayeMovement : MonoBehaviour
 
     public void OnLanding()
     {
-        Debug.Log("landing");
-        
+        //Debug.Log("landing");
         animator.SetBool("IsJumping", false);        
     }
 
