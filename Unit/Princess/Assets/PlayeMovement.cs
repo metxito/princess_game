@@ -57,7 +57,7 @@ public class PlayeMovement : MonoBehaviour
 
     public void OnLanding()
     {
-        //Debug.Log("landing");
+        Debug.Log("landing");
         animator.SetBool("IsJumping", false);        
     }
 
