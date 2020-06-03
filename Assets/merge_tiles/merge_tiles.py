@@ -69,3 +69,4 @@ def merge_tiles(path, result_path):
 merge_tiles ("test/", "test_result.png")
 merge_tiles ("caballero/tiles_caminando/", "caballero/caballero_walking.png")
 merge_tiles ("caballero/tiles_salto/", "caballero/caballero_jumping.png")
+merge_tiles ("caballero/tiles_idle_1/", "caballero/caballero_idle_1.png")
