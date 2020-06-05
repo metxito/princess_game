@@ -29,8 +29,7 @@ def merge_tiles(path, result_path):
         print('error')
 
   total = len(imagelst)
-  print("For " + result_path + " there are a total of " + str(total) + " on " + path)
-  print("with size: (" + str(size_x) + ", " + str(size_y) + ") and " + str(size_ch) + " channels")
+  print("For " + "{:<45}".format(result_path) + " there are a total of " + "{:<2}".format(total) + " on " + "{:<30}".format(path) + "    with size: [" + str(size_x) + ", " + str(size_y) + "] and " + str(size_ch) + " channels")
   new_y = tilewidth
   new_x = int(total / tilewidth)
   if (total % tilewidth) > 0:
@@ -70,3 +69,4 @@ merge_tiles ("test/", "test_result.png")
 merge_tiles ("caballero/tiles_caminando/", "caballero/caballero_walking.png")
 merge_tiles ("caballero/tiles_salto/", "caballero/caballero_jumping.png")
 merge_tiles ("caballero/tiles_idle_1/", "caballero/caballero_idle_1.png")
+merge_tiles ("caballero/tiles_landing/", "caballero/caballero_tiles_landing.png")

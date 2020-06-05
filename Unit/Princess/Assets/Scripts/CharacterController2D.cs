@@ -5,6 +5,7 @@ public class CharacterController2D : MonoBehaviour
 {
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
+	[Range(0, 1)] [SerializeField] private float m_AirSpeed = .5f;			    // Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
@@ -21,43 +22,61 @@ public class CharacterController2D : MonoBehaviour
 
 	[Header("Events")]
 	[Space]
-
 	public UnityEvent OnLandEvent;
+	public UnityEvent OnFalling;
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
+	private bool m_falling = false;
+	private float prev_y = -9999f;
 
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
-
+		
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
 
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
+
+		if (OnFalling == null)
+			OnFalling = new UnityEvent();
 	}
 
 	private void FixedUpdate()
 	{
-		bool wasGrounded = m_Grounded;
-		m_Grounded = false;
+		if (!m_falling && prev_y - transform.position.y > 0.05f){
+			m_falling = true;
+			m_Grounded = false;
+			OnFalling.Invoke();
+		}
+		prev_y = transform.position.y;
 
-		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
-		// This can be done using layers instead but Sample Assets will not overwrite your project settings.
-		Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
-		for (int i = 0; i < colliders.Length; i++)
-		{
-			if (colliders[i].gameObject != gameObject)
+		if (!m_Grounded){
+			bool wasGrounded = m_Grounded;
+			m_Grounded = false;
+
+			// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
+			// This can be done using layers instead but Sample Assets will not overwrite your project settings.
+			Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
+			foreach(Collider2D col in colliders)
+			//for (int i = 0; i < colliders.Length; i++)
 			{
-				m_Grounded = true;
-				if (!wasGrounded)
-					OnLandEvent.Invoke();
+				if (col.gameObject != gameObject)
+				{
+					m_Grounded = true;
+					m_falling = false;
+					if (!wasGrounded)
+						OnLandEvent.Invoke();
+				}
 			}
 		}
+
+
 	}
 
 
@@ -89,6 +108,9 @@ public class CharacterController2D : MonoBehaviour
 
 				// Reduce the speed by the crouchSpeed multiplier
 				move *= m_CrouchSpeed;
+				if (m_AirControl && !m_Grounded){
+					move *= m_AirSpeed;
+				}
 
 				// Disable one of the colliders when crouching
 				if (m_CrouchDisableCollider != null)
@@ -125,15 +147,13 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 
-        Debug.Log("m_Grounded: " + (m_Grounded ? "true" : "false") + "      jump: " + (jump ? "true" : "false"));
         // If the player should jump...
         if (m_Grounded && jump)
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-            Debug.Log("Salto");
-		}
+        }
 	}
 
 
