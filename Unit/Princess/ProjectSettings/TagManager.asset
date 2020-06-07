@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,13 +14,13 @@ TagManager:
   - UI
   - 
   - 
-  - background
-  - tower
-  - player
-  - grass
-  - foreground
+  - Background
+  - Tower
+  - Character
+  - Grass
+  - Foreground
   - 
-  - post_processing
+  - 
   - 
   - 
   - 

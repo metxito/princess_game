@@ -14,6 +14,27 @@ TextureImporter:
   - first:
       213: 4242401806167287005
     second: caballero_jumping_3
+  - first:
+      213: -3641997936601093574
+    second: caballero_jumping_0
+  - first:
+      213: 950645805362804236
+    second: caballero_jumping_1
+  - first:
+      213: -1152726834101164530
+    second: caballero_jumping_2
+  - first:
+      213: -6982750780039603580
+    second: caballero_jumping_3
+  - first:
+      213: -3142533443041823552
+    second: caballero_jumping_4
+  - first:
+      213: -4325079462840403276
+    second: caballero_jumping_5
+  - first:
+      213: 3403860181856780323
+    second: caballero_jumping_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,6 +124,111 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3aaf2c3c26057dc0800000000000000
+      internalID: -3641997936601093574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caballero_jumping_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c067ddfb25f513d00800000000000000
+      internalID: 950645805362804236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caballero_jumping_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06e6524d01b000f0800000000000000
+      internalID: -1152726834101164530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caballero_jumping_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a58a86929481f90800000000000000
+      internalID: -6982750780039603580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caballero_jumping_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4f4b0cb7a7364d0800000000000000
+      internalID: -3142533443041823552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caballero_jumping_5
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 32
         height: 32
@@ -113,14 +239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6af75b93aba65b410800000000000000
-      internalID: 1492216199607844774
+      spriteID: 4ba7f00d42b3af3c0800000000000000
+      internalID: -4325079462840403276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caballero_jumping_1
+      name: caballero_jumping_6
       rect:
         serializedVersion: 2
         x: 32
@@ -134,50 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98920dd5c2f619730800000000000000
-      internalID: 4004103780052248969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: caballero_jumping_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 722e9cb13f0bf9ee0800000000000000
-      internalID: -1252087613195951577
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: caballero_jumping_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd4a31b27f900ea30800000000000000
-      internalID: 4242401806167287005
+      spriteID: 3208bac0dc0fc3f20800000000000000
+      internalID: 3403860181856780323
       vertices: []
       indices: 
       edges: []

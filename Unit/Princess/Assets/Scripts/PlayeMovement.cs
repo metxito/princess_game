@@ -56,12 +56,10 @@ public class PlayeMovement : MonoBehaviour
 
     public void OutCrunched(bool crunched)
     {
-        Debug.Log("OutCrunched()");
         animator.SetBool("IsCrunched", crunched);
     }
 
     public void OnFalling(){
-        Debug.Log("OnFalling()");
         animator.SetBool("Falling", true);
         animator.SetBool("IsJumping", false);
     }
