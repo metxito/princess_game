@@ -6,6 +6,7 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, 1)] [SerializeField] private float m_AirSpeed = .5f;			    // Amount of maxSpeed applied to crouching movement. 1 = 100%
+	[Range(10, 25)] [SerializeField] private float m_sleep_wait = 25f;			// Amount of seconds to wait until start the second idle or sleep time
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
@@ -14,24 +15,30 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Collider2D m_CrouchDisableCollider;				// A collider that will be disabled when crouching
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-	private bool m_Grounded;            // Whether or not the player is grounded.
+	private bool m_Grounded = false;            // Whether or not the player is grounded.
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
-	[Header("Events")]
-	[Space]
-	public UnityEvent OnLandEvent;
-	public UnityEvent OnFalling;
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
+
+	[Header("Events")]
+	[Space]
+	public UnityEvent OnLandEvent;
+	public UnityEvent OnFalling;
+	public BoolEvent OnSleepingEvent;
 	public BoolEvent OnCrouchEvent;
+	
+	
 	private bool m_wasCrouching = false;
 	private bool m_falling = false;
 	private float prev_y = -9999f;
+	private float sleep_waiting = 0f;
+	private bool sleeping = false;
 
 	private void Awake()
 	{
@@ -45,6 +52,11 @@ public class CharacterController2D : MonoBehaviour
 
 		if (OnFalling == null)
 			OnFalling = new UnityEvent();
+
+		if (OnSleepingEvent == null)
+			OnSleepingEvent = new BoolEvent();
+
+
 	}
 
 	private void FixedUpdate()
@@ -52,13 +64,17 @@ public class CharacterController2D : MonoBehaviour
 		if (!m_falling && prev_y - transform.position.y > 0.05f){
 			m_falling = true;
 			m_Grounded = false;
+			sleep_waiting = 0f;
 			OnFalling.Invoke();
 		}
 		prev_y = transform.position.y;
 
+
+
 		if (!m_Grounded){
-			bool wasGrounded = m_Grounded;
-			m_Grounded = false;
+			
+			//bool wasGrounded = m_Grounded;
+			//m_Grounded = false;
 
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
 			foreach(Collider2D col in colliders)
@@ -67,14 +83,44 @@ public class CharacterController2D : MonoBehaviour
 				{
 					m_Grounded = true;
 					m_falling = false;
-					if (!wasGrounded)
-						OnLandEvent.Invoke();
+
+					Debug.LogError("Collider: " + col.name);
 				}
 			}
+
+			if (m_Grounded){
+				
+				sleep_waiting = 0f;
+				OnLandEvent.Invoke();
+			} 
+		}
+
+	}
+
+	
+	private float debugCountDown = 0f;
+	void Update()
+	{
+		sleep_waiting += Time.deltaTime;
+		if (sleep_waiting > m_sleep_wait && !sleeping){
+			sleeping = true;
+			OnSleepingEvent.Invoke(true);
+		}else if (sleep_waiting < m_sleep_wait && sleeping) {
+			sleeping = true;
+			OnSleepingEvent.Invoke(false);
 		}
 
 
+		debugCountDown -= Time.deltaTime;
+		if (debugCountDown < 0f)
+		{
+			Debug.Log("sleep_waiting:" + sleep_waiting.ToString() + "      sleeping:" + (sleeping?"true":"false"));
+			debugCountDown = 1f;
+		}
 	}
+
+
+
 
 
 	public void Move(float move, bool crouch, bool jump)
@@ -86,6 +132,7 @@ public class CharacterController2D : MonoBehaviour
 			// If the character has a ceiling preventing them from standing up, keep them crouching
 			if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
 			{
+				sleep_waiting = 0f;
 				crouch = true;
 			}
 		}
@@ -100,6 +147,7 @@ public class CharacterController2D : MonoBehaviour
 				if (!m_wasCrouching)
 				{
 					m_wasCrouching = true;
+					sleep_waiting = 0f;
 					OnCrouchEvent.Invoke(true);
 				}
 
@@ -112,7 +160,8 @@ public class CharacterController2D : MonoBehaviour
 				// Disable one of the colliders when crouching
 				if (m_CrouchDisableCollider != null)
 					m_CrouchDisableCollider.enabled = false;
-			} else
+			} 
+			else
 			{
 				// Enable the collider when not crouching
 				if (m_CrouchDisableCollider != null)
@@ -121,6 +170,7 @@ public class CharacterController2D : MonoBehaviour
 				if (m_wasCrouching)
 				{
 					m_wasCrouching = false;
+					sleep_waiting = 0f;
 					OnCrouchEvent.Invoke(false);
 				}
 			}
@@ -142,6 +192,9 @@ public class CharacterController2D : MonoBehaviour
 				// ... flip the player.
 				Flip();
 			}
+
+			if (Mathf.Abs(move) > .01f )
+				sleep_waiting = 0f;
 		}
 
         // If the player should jump...
@@ -150,6 +203,7 @@ public class CharacterController2D : MonoBehaviour
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			sleep_waiting = 0f;
         }
 	}
 

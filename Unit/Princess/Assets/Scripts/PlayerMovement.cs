@@ -31,6 +31,11 @@ public class PlayerMovement : MonoBehaviour
         {
             crunch = false;
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            animator.SetTrigger("Attack");
+        }
     }
 
     void FixedUpdate()
@@ -54,5 +59,14 @@ public class PlayerMovement : MonoBehaviour
     public void OnFalling(){
         animator.SetBool("Falling", true);
         animator.SetBool("IsJumping", false);
+    }
+
+    public void OnSleeping(bool sleep){
+        animator.SetBool("ToSleep", sleep);
+    }
+
+    public void Attack()
+    {
+        Debug.Log("ATTACK!!!!");
     }
 }

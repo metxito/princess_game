@@ -4789,7 +4789,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4492924039780234594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24, y: 0.73, z: 0}
+  m_LocalPosition: {x: -0.13, y: 0.436, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4492924040066396867}
@@ -4810,8 +4810,8 @@ GameObject:
   - component: {fileID: 4492924040066396864}
   - component: {fileID: 4492924040066396870}
   - component: {fileID: 4492924040066396868}
-  - component: {fileID: 4492924040066396872}
   - component: {fileID: 4492924040066396869}
+  - component: {fileID: 4492924040066396872}
   m_Layer: 10
   m_Name: Knight
   m_TagString: Player
@@ -4876,7 +4876,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5709044182721307513, guid: e68e502f5e15a2841999b22ebc4e02a8,
+  m_Sprite: {fileID: -7015780065096085802, guid: 5c570924edf4abd4c85fad5914c51597,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4941,7 +4941,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.30488205, y: 0.16722357}
+  m_Offset: {x: -0.113521576, y: 0.0006688833}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4952,7 +4952,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.79491425, y: 1.408695}
+  m_Size: {x: 0.8232651, y: 1.0755856}
   m_EdgeRadius: 0
 --- !u!58 &4492924040066396870
 CircleCollider2D:
@@ -4967,9 +4967,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.30838394, y: -0.567032}
+  m_Offset: {x: -0.138134, y: -0.567032}
   serializedVersion: 2
-  m_Radius: 0.38963234
+  m_Radius: 0.43200302
 --- !u!114 &4492924040066396868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4982,9 +4982,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9348c43acffe8174f98c10bb9d7d8f7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 800
+  m_JumpForce: 600
   m_CrouchSpeed: 0.36
   m_AirSpeed: 0.5
+  m_sleep_wait: 25
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -5011,7 +5012,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4492924040066396869}
-        m_MethodName: 
+        m_MethodName: OnFalling
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5021,23 +5022,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnSleepingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4492924040066396869}
+        m_MethodName: OnSleeping
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4492924040066396872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4492924040066396895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e07e6f89ca0b3843879e788871a8df9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 5
-  BloodPS: {fileID: 4492924039730291961}
 --- !u!114 &4492924040066396869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5053,6 +5054,20 @@ MonoBehaviour:
   controler: {fileID: 4492924040066396868}
   animator: {fileID: 4492924040066396871}
   runSpeed: 25
+--- !u!114 &4492924040066396872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4492924040066396895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e07e6f89ca0b3843879e788871a8df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 5
+  BloodPS: {fileID: 4492924039730291961}
 --- !u!1 &4492924040167291918
 GameObject:
   m_ObjectHideFlags: 0
@@ -5149,7 +5164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4492924041334012605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31, y: -0.93, z: 0}
+  m_LocalPosition: {x: -0.187, y: -1.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4492924040066396867}

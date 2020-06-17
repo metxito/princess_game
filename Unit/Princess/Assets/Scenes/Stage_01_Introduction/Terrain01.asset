@@ -17,32 +17,38 @@ MonoBehaviour:
     m_End: 60
     m_Order: 0
     m_Sprites:
-    - {fileID: -6607810674734213916, guid: 1e8f9f256a40239408363cd12d5eb6d3, type: 3}
-    - {fileID: 8841305847975822742, guid: 1e8f9f256a40239408363cd12d5eb6d3, type: 3}
+    - {fileID: 21300000, guid: 7977e79c9d6a1014897f43bbf79e8bee, type: 3}
+    - {fileID: 21300000, guid: 2de643de60d2ebf4bb859400db0d1115, type: 3}
   - m_Start: 60
     m_End: 120
     m_Order: 0
     m_Sprites:
-    - {fileID: -3357396654892378370, guid: 1e8f9f256a40239408363cd12d5eb6d3, type: 3}
+    - {fileID: 21300000, guid: 59f381fc588e49e4b92d14d6b03db985, type: 3}
   - m_Start: -120
     m_End: -60
     m_Order: 0
     m_Sprites:
-    - {fileID: -5117058734206062383, guid: 1e8f9f256a40239408363cd12d5eb6d3, type: 3}
-  m_FillTexture: {fileID: 0}
+    - {fileID: 21300000, guid: 0be8d3e905c9fea4784cca6561e48f27, type: 3}
+  - m_Start: -240
+    m_End: -120
+    m_Order: 0
+    m_Sprites:
+    - {fileID: 21300000, guid: fb048b9d427e97646a4edb55d2265201, type: 3}
+    - {fileID: 21300000, guid: bcbe2007acfdd714ba5b5b51987efbbc, type: 3}
+  m_FillTexture: {fileID: 2800000, guid: 14e710f34c970f241bc2edb0ad9b79e4, type: 3}
   m_CornerSprites:
   - m_CornerType: 0
     m_Sprites:
-    - {fileID: 3652926729771734407, guid: 1e8f9f256a40239408363cd12d5eb6d3, type: 3}
+    - {fileID: 21300000, guid: f95d971ba76a23a4a8afd1ae8106e937, type: 3}
   - m_CornerType: 1
     m_Sprites:
-    - {fileID: -7697525198658956069, guid: 1e8f9f256a40239408363cd12d5eb6d3, type: 3}
+    - {fileID: 21300000, guid: af3c70fc7fdf8c54dadd6cae6fc2792a, type: 3}
   - m_CornerType: 2
     m_Sprites:
-    - {fileID: 0}
+    - {fileID: 21300000, guid: 00ecfac3879ecde489176651b1ca0a32, type: 3}
   - m_CornerType: 3
     m_Sprites:
-    - {fileID: 0}
+    - {fileID: 21300000, guid: fe258932b3c4a8e4cb19334f6bc0f80b, type: 3}
   - m_CornerType: 4
     m_Sprites:
     - {fileID: 0}
@@ -55,5 +61,5 @@ MonoBehaviour:
   - m_CornerType: 7
     m_Sprites:
     - {fileID: 0}
-  m_FillOffset: 0
+  m_FillOffset: -0.129
   m_UseSpriteBorders: 1
