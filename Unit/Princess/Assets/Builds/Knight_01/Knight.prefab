@@ -48,7 +48,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -4985,7 +4985,7 @@ MonoBehaviour:
   m_JumpForce: 600
   m_CrouchSpeed: 0.36
   m_AirSpeed: 0.5
-  m_sleep_wait: 25
+  m_sleepTimeWait: 25
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -5027,7 +5027,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4492924040066396869}
         m_MethodName: OnSleeping
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5039,6 +5039,8 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
+  waitingToSleep: 0
+  isSleeping: 0
 --- !u!114 &4492924040066396869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5164,7 +5166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4492924041334012605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.187, y: -1.005, z: 0}
+  m_LocalPosition: {x: -0.187, y: -1.051, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4492924040066396867}

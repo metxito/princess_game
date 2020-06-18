@@ -6,7 +6,7 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, 1)] [SerializeField] private float m_AirSpeed = .5f;			    // Amount of maxSpeed applied to crouching movement. 1 = 100%
-	[Range(10, 25)] [SerializeField] private float m_sleep_wait = 25f;			// Amount of seconds to wait until start the second idle or sleep time
+	[Range(2, 25)] [SerializeField] private float m_sleepTimeWait = 25f;		// Amount of seconds to wait until start the second idle or sleep time
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
@@ -14,7 +14,7 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Transform m_CeilingCheck;							// A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;				// A collider that will be disabled when crouching
 
-	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
+	const float k_GroundedRadius = .1f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded = false;            // Whether or not the player is grounded.
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
 	private Rigidbody2D m_Rigidbody2D;
@@ -22,8 +22,8 @@ public class CharacterController2D : MonoBehaviour
 	private Vector3 m_Velocity = Vector3.zero;
 
 
-	[System.Serializable]
-	public class BoolEvent : UnityEvent<bool> { }
+	
+	[System.Serializable] public class BoolEvent : UnityEvent<bool> { }
 
 
 	[Header("Events")]
@@ -36,10 +36,15 @@ public class CharacterController2D : MonoBehaviour
 	
 	private bool m_wasCrouching = false;
 	private bool m_falling = false;
-	private float prev_y = -9999f;
-	private float sleep_waiting = 0f;
-	private bool sleeping = false;
 
+	[SerializeField] private float waitingToSleep = 0f;
+	[SerializeField] private bool isSleeping = false;
+
+
+	private float timeToCheckLanding = 0.01f;
+
+
+	private float prev_pos_y = -9999f;
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -58,20 +63,24 @@ public class CharacterController2D : MonoBehaviour
 
 
 	}
+	
 
 	private void FixedUpdate()
 	{
-		if (!m_falling && prev_y - transform.position.y > 0.05f){
+		if (timeToCheckLanding > 0)
+			timeToCheckLanding -= Time.fixedDeltaTime;
+
+		if (!m_falling && prev_pos_y - transform.position.y > 0.05f){
 			m_falling = true;
 			m_Grounded = false;
-			sleep_waiting = 0f;
+			waitingToSleep = 0f;
 			OnFalling.Invoke();
 		}
-		prev_y = transform.position.y;
+		prev_pos_y = transform.position.y;
 
 
 
-		if (!m_Grounded){
+		if (!m_Grounded && timeToCheckLanding <= 0f){
 			
 			//bool wasGrounded = m_Grounded;
 			//m_Grounded = false;
@@ -83,14 +92,12 @@ public class CharacterController2D : MonoBehaviour
 				{
 					m_Grounded = true;
 					m_falling = false;
-
-					Debug.LogError("Collider: " + col.name);
 				}
 			}
 
 			if (m_Grounded){
 				
-				sleep_waiting = 0f;
+				waitingToSleep = 0f;
 				OnLandEvent.Invoke();
 			} 
 		}
@@ -101,22 +108,24 @@ public class CharacterController2D : MonoBehaviour
 	private float debugCountDown = 0f;
 	void Update()
 	{
-		sleep_waiting += Time.deltaTime;
-		if (sleep_waiting > m_sleep_wait && !sleeping){
-			sleeping = true;
+		waitingToSleep += Time.deltaTime;
+
+		if (waitingToSleep > m_sleepTimeWait && !isSleeping){
+			isSleeping = true;
 			OnSleepingEvent.Invoke(true);
-		}else if (sleep_waiting < m_sleep_wait && sleeping) {
-			sleeping = true;
+
+		}else if (waitingToSleep < m_sleepTimeWait && isSleeping) {
+			isSleeping = false;
 			OnSleepingEvent.Invoke(false);
 		}
 
 
-		debugCountDown -= Time.deltaTime;
-		if (debugCountDown < 0f)
-		{
-			Debug.Log("sleep_waiting:" + sleep_waiting.ToString() + "      sleeping:" + (sleeping?"true":"false"));
-			debugCountDown = 1f;
-		}
+		//debugCountDown -= Time.deltaTime;
+		//if (debugCountDown < 0f)
+		//{
+		//	Debug.Log("waitingToSleep:" + waitingToSleep.ToString() + "      sleeping:" + (sleeping?"true":"false"));
+		//	debugCountDown = 1f;
+		//}
 	}
 
 
@@ -132,7 +141,7 @@ public class CharacterController2D : MonoBehaviour
 			// If the character has a ceiling preventing them from standing up, keep them crouching
 			if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
 			{
-				sleep_waiting = 0f;
+				waitingToSleep = 0f;
 				crouch = true;
 			}
 		}
@@ -147,7 +156,7 @@ public class CharacterController2D : MonoBehaviour
 				if (!m_wasCrouching)
 				{
 					m_wasCrouching = true;
-					sleep_waiting = 0f;
+					waitingToSleep = 0f;
 					OnCrouchEvent.Invoke(true);
 				}
 
@@ -170,7 +179,7 @@ public class CharacterController2D : MonoBehaviour
 				if (m_wasCrouching)
 				{
 					m_wasCrouching = false;
-					sleep_waiting = 0f;
+					waitingToSleep = 0f;
 					OnCrouchEvent.Invoke(false);
 				}
 			}
@@ -194,7 +203,7 @@ public class CharacterController2D : MonoBehaviour
 			}
 
 			if (Mathf.Abs(move) > .01f )
-				sleep_waiting = 0f;
+				waitingToSleep = 0f;
 		}
 
         // If the player should jump...
@@ -203,7 +212,8 @@ public class CharacterController2D : MonoBehaviour
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-			sleep_waiting = 0f;
+			timeToCheckLanding = .2f;
+			waitingToSleep = 0f;
         }
 	}
 
@@ -217,5 +227,19 @@ public class CharacterController2D : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+
+
+	/// <summary>
+	/// Callback to draw gizmos that are pickable and always drawn.
+	/// </summary>
+	private void OnDrawGizmosSelected() {
+		if (m_GroundCheck != null)
+			Gizmos.DrawWireSphere(m_GroundCheck.position, k_GroundedRadius);
+
+		if (m_CeilingCheck != null)
+			Gizmos.DrawWireSphere(m_CeilingCheck.position, k_CeilingRadius);
+		
 	}
 }
