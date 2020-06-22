@@ -108,6 +108,10 @@ public class CharacterController2D : MonoBehaviour
 	private float debugCountDown = 0f;
 	void Update()
 	{
+		if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump") || Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.01)
+			waitingToSleep = 0f;
+
+
 		waitingToSleep += Time.deltaTime;
 
 		if (waitingToSleep > m_sleepTimeWait && !isSleeping){

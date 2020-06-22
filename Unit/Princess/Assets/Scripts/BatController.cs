@@ -5,7 +5,6 @@ using UnityEngine;
 public class BatController : MonoBehaviour
 {
     public Animator Animator;
-    public CharacterController2D Player;
     public float RangeIn = 10f;
     public float RangeOut = 20f;
     public float Velocity = 2f;
@@ -17,6 +16,7 @@ public class BatController : MonoBehaviour
     
 
     bool m_FacingRight = false;
+    private CharacterController2D m_player;
 
     private Vector2 direction = Vector2.zero;
 
@@ -29,19 +29,29 @@ public class BatController : MonoBehaviour
         NoiseLvl2 = Noise * -0.5f;
         NoiseLvl3 = Noise * 0.5f;
         NoiseLvl4 = Noise;
+
+        m_player = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController2D>();
+
+        if (m_player == null){
+            Debug.LogError("It was not possible to find the Player");
+        }
     }
 
+
+    
+
     void FixedUpdate() {
+        
         if (direction.x == 0 && direction.y == 0)
         {
-            if (Vector2.Distance(transform.position, Player.transform.position) <= RangeIn)
+            if (Vector2.Distance(transform.position, m_player.transform.position) <= RangeIn)
             {
                 Animator.SetBool("attack", true);
             }
         }
         else
         {
-            if (Vector2.Distance(transform.position, Player.transform.position) > RangeOut)
+            if (Vector2.Distance(transform.position, m_player.transform.position) > RangeOut)
             {
                 direction = Vector2.zero;
                 Animator.SetBool("attack", false);
@@ -77,7 +87,7 @@ public class BatController : MonoBehaviour
 
     public void set_new_direction()
     {
-        Vector2 vplayer = new Vector2(Player.transform.position.x, Player.transform.position.y);
+        Vector2 vplayer = new Vector2(m_player.transform.position.x, m_player.transform.position.y);
         Vector2 vthis = new Vector2(transform.position.x, transform.position.y);
         direction = vplayer - vthis;
         direction = direction.normalized;

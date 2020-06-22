@@ -1,5 +1,86 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &304080659791833396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8512515197242159873}
+  - component: {fileID: 5417286397989251453}
+  - component: {fileID: 404385538409167924}
+  m_Layer: 10
+  m_Name: AttackRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8512515197242159873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304080659791833396}
+  m_LocalRotation: {x: 0, y: 0, z: 0.2321723, w: 0.9726747}
+  m_LocalPosition: {x: -0.133, y: 0.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4492924040066396867}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 26.85}
+--- !u!68 &5417286397989251453
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304080659791833396}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0.15
+  m_Points:
+  - {x: 0.31435165, y: -0.016382914}
+  - {x: 0.06277451, y: -0.8361836}
+  - {x: 0.19603011, y: -1.1589044}
+  - {x: 0.45173815, y: -1.0981125}
+  - {x: 0.6483315, y: -0.92039293}
+  - {x: 0.7913266, y: -0.60792327}
+  - {x: 0.81755847, y: -0.2322343}
+  - {x: 0.7326373, y: 0.20598236}
+  - {x: 0.5666714, y: 0.5465886}
+  - {x: 0.2609947, y: 0.7557246}
+  - {x: -0.066958725, y: 0.8889296}
+  - {x: 0.49900967, y: 0.1900407}
+  - {x: 0.5029647, y: -0.3654962}
+  - {x: 0.4692064, y: -0.6581633}
+  - {x: 0.31223705, y: -0.83212113}
+--- !u!114 &404385538409167924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304080659791833396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1773c4c2a58629c46afed4be5919ffed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCollider: {fileID: 5417286397989251453}
+  animator: {fileID: 4492924040066396871}
+  force: 2
+  attackPower: 1
+  AttackEffect: {fileID: 7227876869669575715, guid: 196b1dfc8e6cb814abd93808ca929656,
+    type: 3}
 --- !u!1 &4492924039730291958
 GameObject:
   m_ObjectHideFlags: 0
@@ -4811,7 +4892,6 @@ GameObject:
   - component: {fileID: 4492924040066396870}
   - component: {fileID: 4492924040066396868}
   - component: {fileID: 4492924040066396869}
-  - component: {fileID: 4492924040066396872}
   m_Layer: 10
   m_Name: Knight
   m_TagString: Player
@@ -4834,6 +4914,7 @@ Transform:
   - {fileID: 4492924041334012606}
   - {fileID: 4492924040167291919}
   - {fileID: 4492924039730291959}
+  - {fileID: 8512515197242159873}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4855,7 +4936,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 52320d4261b700d4cb774814a464f6a9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4876,7 +4957,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4465261034850982746, guid: f4bdd22a9eaa9ee43bc3358385d295d0,
+  m_Sprite: {fileID: -1017034529772909018, guid: f2d9842293be5b74a8566512cab8e21f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5056,20 +5137,6 @@ MonoBehaviour:
   controler: {fileID: 4492924040066396868}
   animator: {fileID: 4492924040066396871}
   runSpeed: 25
---- !u!114 &4492924040066396872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4492924040066396895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e07e6f89ca0b3843879e788871a8df9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 5
-  BloodPS: {fileID: 4492924039730291961}
 --- !u!1 &4492924040167291918
 GameObject:
   m_ObjectHideFlags: 0
