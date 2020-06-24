@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Knight_material
-  m_Shader: {fileID: -6465566751694194690, guid: bd03d649487e9834d9bba1e99b863ec4,
+  m_Name: BatMaterialDamage
+  m_Shader: {fileID: -6465566751694194690, guid: 9767464138ff54947bffcb45af09eec5,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -20,14 +20,11 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Emission:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ce50d72b47d400a4f935866d61df209f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - _Damage: 1
     m_Colors:
-    - Color_4BF0FBAA: {r: 0.22745098, g: 0.68235296, b: 1.4980392, a: 1}
+    - _ColorDamage: {r: 0.8773585, g: 0.08690815, b: 0.08690815, a: 1}

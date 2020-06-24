@@ -77,10 +77,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCollider: {fileID: 5417286397989251453}
   animator: {fileID: 4492924040066396871}
-  force: 2
+  force: 1
   attackPower: 1
-  AttackEffect: {fileID: 7227876869669575715, guid: 196b1dfc8e6cb814abd93808ca929656,
-    type: 3}
+  AttackEffect: {fileID: 1976571367, guid: 196b1dfc8e6cb814abd93808ca929656, type: 3}
 --- !u!1 &4492924039730291958
 GameObject:
   m_ObjectHideFlags: 0
@@ -4892,6 +4891,7 @@ GameObject:
   - component: {fileID: 4492924040066396870}
   - component: {fileID: 4492924040066396868}
   - component: {fileID: 4492924040066396869}
+  - component: {fileID: 8703797225585688789}
   m_Layer: 10
   m_Name: Knight
   m_TagString: Player
@@ -5137,6 +5137,21 @@ MonoBehaviour:
   controler: {fileID: 4492924040066396868}
   animator: {fileID: 4492924040066396871}
   runSpeed: 25
+--- !u!114 &8703797225585688789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4492924040066396895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e07e6f89ca0b3843879e788871a8df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 10
+  animator: {fileID: 4492924040066396871}
+  damageMaterial: {fileID: 2100000, guid: 5f336325fd5c29d4a8f1a96c86d9b210, type: 2}
 --- !u!1 &4492924040167291918
 GameObject:
   m_ObjectHideFlags: 0

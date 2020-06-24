@@ -38,7 +38,7 @@ public class PlayerAttackController : MonoBehaviour
                     hc.Damage(attackPower);
 
                 ParticleSystem ae = GameObject.Instantiate(AttackEffect, colPosition, col.transform.rotation);
-                GameObject.Destroy(ae, 1f);
+                GameObject.Destroy(ae, .51f);
 
             }
         }

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_BatShader
+  m_Name: BatMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 9767464138ff54947bffcb45af09eec5,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA

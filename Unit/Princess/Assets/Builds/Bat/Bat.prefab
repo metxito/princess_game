@@ -164,6 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e07e6f89ca0b3843879e788871a8df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 3
+  MaxHealth: 10
   animator: {fileID: 7512323953703351600}
-  material: {fileID: 2100000, guid: 7264490f94102cd46b85b9556ec4ebf2, type: 2}
+  damageMaterial: {fileID: 2100000, guid: 094879e74a530924890499d79ef1863c, type: 2}
