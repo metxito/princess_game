@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7512323953703351604}
   - component: {fileID: 7512323953703351601}
   - component: {fileID: 7512323953703351605}
-  - component: {fileID: 7760214523324874184}
+  - component: {fileID: 7129266716021690156}
   m_Layer: 10
   m_Name: Bat
   m_TagString: Enemy
@@ -134,11 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f329a071e9f24a04baa26ae30d3c3266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: 7512323953703351600}
-  RangeIn: 8
-  RangeOut: 10
-  Velocity: 4
-  Noise: 0.2
+  m_animator: {fileID: 7512323953703351600}
+  m_rangeIn: 6.7
+  m_rangeOut: 7.6
+  m_velocity: 3
+  m_accelerationPower: 0.01
+  m_noise: 0.2
 --- !u!114 &7512323953703351605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackPower: 1
---- !u!114 &7760214523324874184
+--- !u!114 &7129266716021690156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

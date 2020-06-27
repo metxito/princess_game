@@ -37,14 +37,14 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_wasCrouching = false;
 	private bool m_falling = false;
 
-	[SerializeField] private float waitingToSleep = 0f;
-	[SerializeField] private bool isSleeping = false;
+	[SerializeField] private float m_waitingToSleep = 0f;
+	[SerializeField] private bool m_isSleeping = false;
 
 
-	private float timeToCheckLanding = 0.01f;
+	private float m_timeToCheckLanding = 0.01f;
 
 
-	private float prev_pos_y = -9999f;
+	private float m_prevPosY = -9999f;
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -67,20 +67,20 @@ public class CharacterController2D : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if (timeToCheckLanding > 0)
-			timeToCheckLanding -= Time.fixedDeltaTime;
+		if (m_timeToCheckLanding > 0)
+			m_timeToCheckLanding -= Time.fixedDeltaTime;
 
-		if (!m_falling && prev_pos_y - transform.position.y > 0.05f){
+		if (!m_falling && m_prevPosY - transform.position.y > 0.05f){
 			m_falling = true;
 			m_Grounded = false;
-			waitingToSleep = 0f;
+			m_waitingToSleep = 0f;
 			OnFalling.Invoke();
 		}
-		prev_pos_y = transform.position.y;
+		m_prevPosY = transform.position.y;
 
 
 
-		if (!m_Grounded && timeToCheckLanding <= 0f){
+		if (!m_Grounded && m_timeToCheckLanding <= 0f){
 			
 			//bool wasGrounded = m_Grounded;
 			//m_Grounded = false;
@@ -97,7 +97,7 @@ public class CharacterController2D : MonoBehaviour
 
 			if (m_Grounded){
 				
-				waitingToSleep = 0f;
+				m_waitingToSleep = 0f;
 				OnLandEvent.Invoke();
 			} 
 		}
@@ -105,31 +105,23 @@ public class CharacterController2D : MonoBehaviour
 	}
 
 	
-	private float debugCountDown = 0f;
 	void Update()
 	{
 		if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump") || Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.01)
-			waitingToSleep = 0f;
+			m_waitingToSleep = 0f;
 
 
-		waitingToSleep += Time.deltaTime;
+		m_waitingToSleep += Time.deltaTime;
 
-		if (waitingToSleep > m_sleepTimeWait && !isSleeping){
-			isSleeping = true;
+		if (m_waitingToSleep > m_sleepTimeWait && !m_isSleeping){
+			m_isSleeping = true;
 			OnSleepingEvent.Invoke(true);
 
-		}else if (waitingToSleep < m_sleepTimeWait && isSleeping) {
-			isSleeping = false;
+		}else if (m_waitingToSleep < m_sleepTimeWait && m_isSleeping) {
+			m_isSleeping = false;
 			OnSleepingEvent.Invoke(false);
 		}
 
-
-		//debugCountDown -= Time.deltaTime;
-		//if (debugCountDown < 0f)
-		//{
-		//	Debug.Log("waitingToSleep:" + waitingToSleep.ToString() + "      sleeping:" + (sleeping?"true":"false"));
-		//	debugCountDown = 1f;
-		//}
 	}
 
 
@@ -145,7 +137,7 @@ public class CharacterController2D : MonoBehaviour
 			// If the character has a ceiling preventing them from standing up, keep them crouching
 			if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
 			{
-				waitingToSleep = 0f;
+				m_waitingToSleep = 0f;
 				crouch = true;
 			}
 		}
@@ -160,7 +152,7 @@ public class CharacterController2D : MonoBehaviour
 				if (!m_wasCrouching)
 				{
 					m_wasCrouching = true;
-					waitingToSleep = 0f;
+					m_waitingToSleep = 0f;
 					OnCrouchEvent.Invoke(true);
 				}
 
@@ -183,7 +175,7 @@ public class CharacterController2D : MonoBehaviour
 				if (m_wasCrouching)
 				{
 					m_wasCrouching = false;
-					waitingToSleep = 0f;
+					m_waitingToSleep = 0f;
 					OnCrouchEvent.Invoke(false);
 				}
 			}
@@ -207,7 +199,7 @@ public class CharacterController2D : MonoBehaviour
 			}
 
 			if (Mathf.Abs(move) > .01f )
-				waitingToSleep = 0f;
+				m_waitingToSleep = 0f;
 		}
 
         // If the player should jump...
@@ -216,8 +208,8 @@ public class CharacterController2D : MonoBehaviour
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-			timeToCheckLanding = .2f;
-			waitingToSleep = 0f;
+			m_timeToCheckLanding = .2f;
+			m_waitingToSleep = 0f;
         }
 	}
 

@@ -8,6 +8,8 @@ public class HealthController : MonoBehaviour
     public Animator animator;
     public Material damageMaterial;
 
+    private CharacterGeneralController m_characterController;
+
 
     private float m_currentHealth = 0f;
     private SpriteRenderer m_render;    
@@ -16,6 +18,7 @@ public class HealthController : MonoBehaviour
     void Awake(){
 
         m_currentHealth = MaxHealth;
+        m_characterController = this.gameObject.GetComponent<CharacterGeneralController>();
 
         m_render = (SpriteRenderer)this.GetComponent<SpriteRenderer>();
         if (m_render == null){
@@ -36,6 +39,9 @@ public class HealthController : MonoBehaviour
             return false;
 
         m_currentHealth -= amount;
+        if (m_characterController != null){
+            m_characterController.ResetVelocity();
+        }
 
         if (m_currentHealth <= 0){
             m_currentHealth = 0;
