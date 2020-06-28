@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030284401070566230}
   - component: {fileID: 999976135670054505}
+  - component: {fileID: 4322144017715709493}
   m_Layer: 0
   m_Name: FireLight
   m_TagString: Untagged
@@ -72,6 +73,22 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &4322144017715709493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510070600937717757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdacdf3400d47d54abec0a35449117c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FrequenceHigh: 0.105
+  m_FrequenceLow: 0.031
+  m_RadioHigh: 1
+  m_RadioLow: 0.42
 --- !u!1 &8706888827756755313
 GameObject:
   m_ObjectHideFlags: 0

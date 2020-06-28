@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, CharacterGeneralController
 {
     [SerializeField] private CharacterController2D m_controller;
     [SerializeField] private Animator m_animator;
@@ -12,7 +12,16 @@ public class PlayerMovement : MonoBehaviour
     private float m_horizontalMove = 0f;
     private bool m_jump = false;
     private bool m_crunch = false;
-    private float m_currentVelocity = 0f;
+    private float m_currentSpeed = 0f;
+    private float m_currentMaxSpeed = 0f;
+
+    
+    private void Awake()
+    {
+        m_currentMaxSpeed = runSpeed;
+        m_currentSpeed = 0f;
+    }
+
 
     void Update()
     {
@@ -41,16 +50,16 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         if (m_horizontalMove > 0.01){
-            m_currentVelocity = Mathf.Lerp(m_currentVelocity, runSpeed, accelerationPower);
+            m_currentSpeed = Mathf.Lerp(m_currentSpeed, m_currentMaxSpeed, accelerationPower);
         }else if (m_horizontalMove < -0.01){
-            m_currentVelocity = Mathf.Lerp(m_currentVelocity, -1 * runSpeed, accelerationPower);
-        }else if (Mathf.Abs(m_currentVelocity) < 0.03){
-            m_currentVelocity = 0f;
+            m_currentSpeed = Mathf.Lerp(m_currentSpeed, -1 * m_currentMaxSpeed, accelerationPower);
+        }else if (Mathf.Abs(m_currentSpeed) < 0.03){
+            m_currentSpeed = 0f;
         }else{
-            m_currentVelocity = Mathf.Lerp(m_currentVelocity, 0f, breakPower);
+            m_currentSpeed = Mathf.Lerp(m_currentSpeed, 0f, breakPower);
         }
         
-        m_controller.Move(m_currentVelocity * Time.fixedDeltaTime, m_crunch, m_jump);
+        m_controller.Move(m_currentSpeed * Time.fixedDeltaTime, m_crunch, m_jump);
         m_jump = false;
     }
 
@@ -76,5 +85,16 @@ public class PlayerMovement : MonoBehaviour
         m_animator.SetBool("ToSleep", sleep);
     }
 
-   
+    public void ReduceSpeed(){
+        m_currentMaxSpeed = 0.5f * runSpeed;
+        if (m_currentSpeed > m_currentMaxSpeed){
+            m_currentSpeed = m_currentMaxSpeed;
+        }
+    }
+
+    public void RestoreSpeed(){
+        m_currentMaxSpeed = runSpeed;
+    }
+
+    public void ResetVelocity(){}
 }
