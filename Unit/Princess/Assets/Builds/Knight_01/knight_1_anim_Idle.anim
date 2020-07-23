@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: knight_1_anim_Landing
+  m_Name: knight_1_anim_Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,22 +20,28 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 9028373716420582710, guid: ddc2d539d5b8d9d44a9e653faf4ff22a,
+      value: {fileID: -8713198405700748339, guid: 840a575a7efb1a34eb16a2b5b797cf00,
         type: 3}
-    - time: 0.1
-      value: {fileID: -190631304691833884, guid: ddc2d539d5b8d9d44a9e653faf4ff22a,
+    - time: 0.125
+      value: {fileID: -3134540715248195777, guid: 840a575a7efb1a34eb16a2b5b797cf00,
         type: 3}
-    - time: 0.2
-      value: {fileID: 4184867714233960400, guid: ddc2d539d5b8d9d44a9e653faf4ff22a,
+    - time: 0.1875
+      value: {fileID: 1175805591517708640, guid: 840a575a7efb1a34eb16a2b5b797cf00,
         type: 3}
-    - time: 0.3
-      value: {fileID: -6350354305203310799, guid: ddc2d539d5b8d9d44a9e653faf4ff22a,
+    - time: 0.25
+      value: {fileID: -5954185531919357470, guid: 840a575a7efb1a34eb16a2b5b797cf00,
+        type: 3}
+    - time: 0.375
+      value: {fileID: 5011313132033063558, guid: 840a575a7efb1a34eb16a2b5b797cf00,
+        type: 3}
+    - time: 0.4375
+      value: {fileID: 210591718503887727, guid: 840a575a7efb1a34eb16a2b5b797cf00,
         type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 10
+  m_SampleRate: 16
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -50,16 +56,18 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 9028373716420582710, guid: ddc2d539d5b8d9d44a9e653faf4ff22a, type: 3}
-    - {fileID: -190631304691833884, guid: ddc2d539d5b8d9d44a9e653faf4ff22a, type: 3}
-    - {fileID: 4184867714233960400, guid: ddc2d539d5b8d9d44a9e653faf4ff22a, type: 3}
-    - {fileID: -6350354305203310799, guid: ddc2d539d5b8d9d44a9e653faf4ff22a, type: 3}
+    - {fileID: -8713198405700748339, guid: 840a575a7efb1a34eb16a2b5b797cf00, type: 3}
+    - {fileID: -3134540715248195777, guid: 840a575a7efb1a34eb16a2b5b797cf00, type: 3}
+    - {fileID: 1175805591517708640, guid: 840a575a7efb1a34eb16a2b5b797cf00, type: 3}
+    - {fileID: -5954185531919357470, guid: 840a575a7efb1a34eb16a2b5b797cf00, type: 3}
+    - {fileID: 5011313132033063558, guid: 840a575a7efb1a34eb16a2b5b797cf00, type: 3}
+    - {fileID: 210591718503887727, guid: 840a575a7efb1a34eb16a2b5b797cf00, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.4
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -78,18 +86,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0
-    functionName: ReduceSpeed
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.3
-    functionName: RestoreSpeed
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

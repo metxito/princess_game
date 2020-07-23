@@ -1,31 +1,49 @@
 fileFormatVersion: 2
-guid: f4bdd22a9eaa9ee43bc3358385d295d0
+guid: 8d1cbd05d1626a742bb55abc61e64b49
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3981708813797183667
-    second: knight_1_sprites_Walk_0
+      213: 2441039885670834955
+    second: knight_1_sprites_Attack_0
   - first:
-      213: 4810029027791782313
-    second: knight_1_sprites_Walk_1
+      213: -4164532053526746309
+    second: knight_1_sprites_Attack_1
   - first:
-      213: 811236657347426078
-    second: knight_1_sprites_Walk_2
+      213: 6114083504612103827
+    second: knight_1_sprites_Attack_2
   - first:
-      213: -4465261034850982746
-    second: knight_1_sprites_Walk_3
+      213: -5687087013887873074
+    second: knight_1_sprites_Attack_3
   - first:
-      213: 2283428434701371076
-    second: knight_1_sprites_Walk_4
+      213: -299352546390453486
+    second: knight_1_sprites_Attack_4
   - first:
-      213: 3229379046715758932
-    second: knight_1_sprites_Walk_5
+      213: -3586421445271842224
+    second: knight_1_sprites_Attack_5
   - first:
-      213: 5108286730377963674
-    second: knight_1_sprites_Walk_6
+      213: 2634278752624731580
+    second: knight_1_sprites_Attack_6
   - first:
-      213: -6585581794982994345
-    second: knight_1_sprites_Walk_7
+      213: 315478305923632438
+    second: knight_1_sprites_Attack_7
+  - first:
+      213: 4003735035210910753
+    second: knight_1_sprites_Attack_8
+  - first:
+      213: -2213917186002656553
+    second: knight_1_sprites_Attack_9
+  - first:
+      213: -764636238619183318
+    second: knight_1_sprites_Attack_10
+  - first:
+      213: 8153255078173416173
+    second: knight_1_sprites_Attack_11
+  - first:
+      213: -4938253440935078844
+    second: knight_1_sprites_Attack_12
+  - first:
+      213: -4873534537927077482
+    second: knight_1_sprites_Attack_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,7 +129,175 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: knight_1_sprites_Walk_0
+      name: knight_1_sprites_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0368f3c7d050e120800000000000000
+      internalID: 2441039885670834955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_1_sprites_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 120
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b6fc5792c9436c0800000000000000
+      internalID: -4164532053526746309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_1_sprites_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 120
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396da7bbd8699d450800000000000000
+      internalID: 6114083504612103827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_1_sprites_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfe97a0e786311b0800000000000000
+      internalID: -5687087013887873074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_1_sprites_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213d9c1f17c78dbf0800000000000000
+      internalID: -299352546390453486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_1_sprites_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 80
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0529abb72b87a3ec0800000000000000
+      internalID: -3586421445271842224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_1_sprites_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb56e898196de8420800000000000000
+      internalID: 2634278752624731580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_1_sprites_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 80
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d8be609ddc06400800000000000000
+      internalID: 315478305923632438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_1_sprites_Attack_8
       rect:
         serializedVersion: 2
         x: 0
@@ -125,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4fa39a0ee02eb8c0800000000000000
-      internalID: -3981708813797183667
+      spriteID: 12c48844dcf109730800000000000000
+      internalID: 4003735035210910753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Walk_1
+      name: knight_1_sprites_Attack_9
       rect:
         serializedVersion: 2
         x: 40
@@ -146,14 +332,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a1c8d88ae7a0c240800000000000000
-      internalID: 4810029027791782313
+      spriteID: 7d2ed269c069641e0800000000000000
+      internalID: -2213917186002656553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Walk_2
+      name: knight_1_sprites_Attack_10
       rect:
         serializedVersion: 2
         x: 80
@@ -167,14 +353,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e17f7f51177124b00800000000000000
-      internalID: 811236657347426078
+      spriteID: a2776b664677365f0800000000000000
+      internalID: -764636238619183318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Walk_3
+      name: knight_1_sprites_Attack_11
       rect:
         serializedVersion: 2
         x: 120
@@ -188,14 +374,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a4605c2fb43802c0800000000000000
-      internalID: -4465261034850982746
+      spriteID: dea1da9bb4e262170800000000000000
+      internalID: 8153255078173416173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Walk_4
+      name: knight_1_sprites_Attack_12
       rect:
         serializedVersion: 2
         x: 0
@@ -209,14 +395,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c6c660301e50bf10800000000000000
-      internalID: 2283428434701371076
+      spriteID: 444d632d8acc77bb0800000000000000
+      internalID: -4938253440935078844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Walk_5
+      name: knight_1_sprites_Attack_13
       rect:
         serializedVersion: 2
         x: 40
@@ -230,50 +416,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 459159c022f01dc20800000000000000
-      internalID: 3229379046715758932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: knight_1_sprites_Walk_6
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a98250767b744e640800000000000000
-      internalID: 5108286730377963674
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: knight_1_sprites_Walk_7
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75e52c6df305b94a0800000000000000
-      internalID: -6585581794982994345
+      spriteID: 691524aa82abd5cb0800000000000000
+      internalID: -4873534537927077482
       vertices: []
       indices: 
       edges: []
@@ -288,7 +432,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures:
-    - texture: {fileID: 2800000, guid: 2c41ad75f9bb4e24a82431c908085d14, type: 3}
+    - texture: {fileID: 2800000, guid: c49dad6d133c99a44b37c2ef744738cf, type: 3}
       name: _Emission
   spritePackingTag: 
   pSDRemoveMatte: 0
