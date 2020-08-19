@@ -46,23 +46,13 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.15
+  m_EdgeRadius: 0.2
   m_Points:
-  - {x: 0.31435165, y: -0.016382914}
-  - {x: 0.06277451, y: -0.8361836}
-  - {x: 0.19603011, y: -1.1589044}
-  - {x: 0.45173815, y: -1.0981125}
-  - {x: 0.6483315, y: -0.92039293}
-  - {x: 0.7913266, y: -0.60792327}
-  - {x: 0.81755847, y: -0.2322343}
-  - {x: 0.7326373, y: 0.20598236}
-  - {x: 0.5666714, y: 0.5465886}
-  - {x: 0.2609947, y: 0.7557246}
-  - {x: -0.066958725, y: 0.8889296}
-  - {x: 0.49900967, y: 0.1900407}
-  - {x: 0.5029647, y: -0.3654962}
-  - {x: 0.4692064, y: -0.6581633}
-  - {x: 0.31223705, y: -0.83212113}
+  - {x: -0.43491656, y: -0.5025267}
+  - {x: 0.2950757, y: -0.7623548}
+  - {x: 0.92814386, y: -0.88702035}
+  - {x: -0.06171465, y: -0.23891377}
+  - {x: -0.9909806, y: 0.330776}
 --- !u!114 &404385538409167924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4869,7 +4859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4492924039780234594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13, y: 0.436, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0.436, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4492924040066396867}
@@ -5022,7 +5012,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.113521576, y: 0.0006688833}
+  m_Offset: {x: -0.4537506, y: 0.0006688833}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5033,7 +5023,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8232651, y: 1.0755856}
+  m_Size: {x: 0.87127686, y: 1.0755856}
   m_EdgeRadius: 0
 --- !u!58 &4492924040066396870
 CircleCollider2D:
@@ -5048,9 +5038,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.138134, y: -0.567032}
+  m_Offset: {x: -0.4663658, y: -0.81026983}
   serializedVersion: 2
-  m_Radius: 0.43200302
+  m_Radius: 0.44404936
 --- !u!114 &4492924040066396868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5250,7 +5240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4492924041334012605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.187, y: -1.051, z: 0}
+  m_LocalPosition: {x: -0.5, y: -1.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4492924040066396867}

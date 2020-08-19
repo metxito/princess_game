@@ -58,6 +58,10 @@ public class HealthController : MonoBehaviour
         return false;
     }
 
+    public void Dead(){
+        GameObject.Destroy(this.gameObject);
+    }
+
 
     IEnumerator ShowDamage() 
     {
