@@ -33,12 +33,13 @@ public class PlayerAttackController : MonoBehaviour
                 q.y = q.y / 3;
                 
                 col.transform.Translate(q.normalized * force);
-                HealthController hc = col.GetComponent<HealthController>();
-                if (hc != null)
+                HealthIAController hc = col.GetComponent<HealthIAController>();
+                if (hc != null){
                     hc.Damage(attackPower);
+                }
 
                 ParticleSystem ae = GameObject.Instantiate(AttackEffect, colPosition, col.transform.rotation);
-                GameObject.Destroy(ae, .51f);
+                GameObject.Destroy(ae.gameObject, .51f);
 
             }
         }

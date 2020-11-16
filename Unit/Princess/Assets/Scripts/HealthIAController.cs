@@ -1,14 +1,13 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthController : MonoBehaviour
+public class HealthIAController : MonoBehaviour
 {
-    public LifeBarScript LifeBar;
-
-    public float MaxHealth = 10;
-    public Animator Animator;
+    public float maxHealth = 10;
+    public Animator animator;
     public Material damageMaterial;
+
 
     private CharacterGeneralController m_characterController;
 
@@ -17,9 +16,11 @@ public class HealthController : MonoBehaviour
     private SpriteRenderer m_render;    
     private Material m_defaultMaterial;
 
+    public bool IsDead = false;
+
     void Awake(){
 
-        m_currentHealth = MaxHealth;
+        m_currentHealth = maxHealth;
         m_characterController = this.gameObject.GetComponent<CharacterGeneralController>();
 
         m_render = (SpriteRenderer)this.GetComponent<SpriteRenderer>();
@@ -32,14 +33,12 @@ public class HealthController : MonoBehaviour
             }
         }
 
-        if (LifeBar != null)
-            LifeBar.SetLife(MaxHealth, MaxHealth);
     }
 
 
 
     public bool Damage(float amount){
-        
+
         if (m_currentHealth <= 0f)
             return false;
 
@@ -48,22 +47,22 @@ public class HealthController : MonoBehaviour
             m_characterController.ResetVelocity();
         }
 
+        Debug.Log(m_currentHealth);
+
         if (m_currentHealth <= 0f){
             m_currentHealth = 0f;
-        }
+                
+            if (animator != null)
+                animator.SetBool("isDead", true);
+            Debug.Log("Dead");
 
-        if (LifeBar != null)
-            LifeBar.SetLife(MaxHealth, m_currentHealth);
-
-        if (m_currentHealth <= 0f){
-            if (Animator != null)
-                Animator.SetBool("isDead", true);
             return true;
         }
         else if (damageMaterial != null) {
             StartCoroutine("ShowDamage");
         }
 
+        
         return false;
     }
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7512323953703351604}
   - component: {fileID: 7512323953703351601}
   - component: {fileID: 7512323953703351605}
-  - component: {fileID: 7129266716021690156}
+  - component: {fileID: 3499296614019989829}
   m_Layer: 10
   m_Name: Bat
   m_TagString: Enemy
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackPower: 1
---- !u!114 &7129266716021690156
+--- !u!114 &3499296614019989829
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,9 +162,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7512323953703351602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e07e6f89ca0b3843879e788871a8df9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ef7c4299023c964aa7ebbdcb252bc84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 10
-  animator: {fileID: 7512323953703351600}
+  Animator: {fileID: 7512323953703351600}
   damageMaterial: {fileID: 2100000, guid: 094879e74a530924890499d79ef1863c, type: 2}
