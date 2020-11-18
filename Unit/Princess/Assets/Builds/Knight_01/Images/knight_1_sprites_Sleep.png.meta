@@ -1,49 +1,91 @@
 fileFormatVersion: 2
-guid: 8d1cbd05d1626a742bb55abc61e64b49
+guid: 7ad289376b576c2439eb6d1e40468112
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2441039885670834955
-    second: knight_1_sprites_Attack_0
+      213: -4209624519400325550
+    second: knight_1_sprites_Sleep_0
   - first:
-      213: -4164532053526746309
-    second: knight_1_sprites_Attack_1
+      213: -3860754904866320199
+    second: knight_1_sprites_Sleep_1
   - first:
-      213: 6114083504612103827
-    second: knight_1_sprites_Attack_2
+      213: 5639456094895257501
+    second: knight_1_sprites_Sleep_2
   - first:
-      213: -5687087013887873074
-    second: knight_1_sprites_Attack_3
+      213: -849482022254565906
+    second: knight_1_sprites_Sleep_3
   - first:
-      213: -299352546390453486
-    second: knight_1_sprites_Attack_4
+      213: 5515584220515169778
+    second: knight_1_sprites_Sleep_4
   - first:
-      213: -3586421445271842224
-    second: knight_1_sprites_Attack_5
+      213: -9205261685155330185
+    second: knight_1_sprites_Sleep_5
   - first:
-      213: 2634278752624731580
-    second: knight_1_sprites_Attack_6
+      213: 6924656801942891127
+    second: knight_1_sprites_Sleep_6
   - first:
-      213: 315478305923632438
-    second: knight_1_sprites_Attack_7
+      213: 4321318695747921605
+    second: knight_1_sprites_Sleep_7
   - first:
-      213: 4003735035210910753
-    second: knight_1_sprites_Attack_8
+      213: 6244159217892905661
+    second: knight_1_sprites_Sleep_8
   - first:
-      213: -2213917186002656553
-    second: knight_1_sprites_Attack_9
+      213: 8667532830459729947
+    second: knight_1_sprites_Sleep_9
   - first:
-      213: -764636238619183318
-    second: knight_1_sprites_Attack_10
+      213: -2627264963594305918
+    second: knight_1_sprites_Sleep_10
   - first:
-      213: 8153255078173416173
-    second: knight_1_sprites_Attack_11
+      213: 8063768130162579932
+    second: knight_1_sprites_Sleep_11
   - first:
-      213: -4938253440935078844
-    second: knight_1_sprites_Attack_12
+      213: 7958701983977948476
+    second: knight_1_sprites_Sleep_12
   - first:
-      213: -4873534537927077482
-    second: knight_1_sprites_Attack_13
+      213: -8711072841331583401
+    second: knight_1_sprites_Sleep_13
+  - first:
+      213: -7508338904280000113
+    second: knight_1_sprites_Sleep_0
+  - first:
+      213: -6611850125891563796
+    second: knight_1_sprites_Sleep_1
+  - first:
+      213: -4853426697361245656
+    second: knight_1_sprites_Sleep_2
+  - first:
+      213: 533884536680399691
+    second: knight_1_sprites_Sleep_3
+  - first:
+      213: -2953015188997857727
+    second: knight_1_sprites_Sleep_4
+  - first:
+      213: -7096052276653374421
+    second: knight_1_sprites_Sleep_5
+  - first:
+      213: 7155701312175147351
+    second: knight_1_sprites_Sleep_6
+  - first:
+      213: 6158652390738700461
+    second: knight_1_sprites_Sleep_7
+  - first:
+      213: 1594924721462493718
+    second: knight_1_sprites_Sleep_8
+  - first:
+      213: 8425980008641974008
+    second: knight_1_sprites_Sleep_9
+  - first:
+      213: -9078143487878966191
+    second: knight_1_sprites_Sleep_10
+  - first:
+      213: 7509804606813485714
+    second: knight_1_sprites_Sleep_11
+  - first:
+      213: 5822943945110798026
+    second: knight_1_sprites_Sleep_12
+  - first:
+      213: -9127898986622947040
+    second: knight_1_sprites_Sleep_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -129,7 +171,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_0
+      name: knight_1_sprites_Sleep_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,20 +179,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0368f3c7d050e120800000000000000
-      internalID: 2441039885670834955
+      spriteID: f8915252c850dc790800000000000000
+      internalID: -7508338904280000113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_1
+      name: knight_1_sprites_Sleep_1
       rect:
         serializedVersion: 2
         x: 40
@@ -158,20 +200,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3b6fc5792c9436c0800000000000000
-      internalID: -4164532053526746309
+      spriteID: cee8c12775dfd34a0800000000000000
+      internalID: -6611850125891563796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_2
+      name: knight_1_sprites_Sleep_2
       rect:
         serializedVersion: 2
         x: 80
@@ -179,20 +221,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 396da7bbd8699d450800000000000000
-      internalID: 6114083504612103827
+      spriteID: 82ab260222a25acb0800000000000000
+      internalID: -4853426697361245656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_3
+      name: knight_1_sprites_Sleep_3
       rect:
         serializedVersion: 2
         x: 120
@@ -200,20 +242,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecfe97a0e786311b0800000000000000
-      internalID: -5687087013887873074
+      spriteID: b43c8ef482db86700800000000000000
+      internalID: 533884536680399691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_4
+      name: knight_1_sprites_Sleep_4
       rect:
         serializedVersion: 2
         x: 0
@@ -221,20 +263,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 213d9c1f17c78dbf0800000000000000
-      internalID: -299352546390453486
+      spriteID: 14e1373d458c407d0800000000000000
+      internalID: -2953015188997857727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_5
+      name: knight_1_sprites_Sleep_5
       rect:
         serializedVersion: 2
         x: 40
@@ -242,20 +284,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0529abb72b87a3ec0800000000000000
-      internalID: -3586421445271842224
+      spriteID: b2449760d02c58d90800000000000000
+      internalID: -7096052276653374421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_6
+      name: knight_1_sprites_Sleep_6
       rect:
         serializedVersion: 2
         x: 80
@@ -263,20 +305,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb56e898196de8420800000000000000
-      internalID: 2634278752624731580
+      spriteID: 7590ffe4e682e4360800000000000000
+      internalID: 7155701312175147351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_7
+      name: knight_1_sprites_Sleep_7
       rect:
         serializedVersion: 2
         x: 120
@@ -284,20 +326,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63d8be609ddc06400800000000000000
-      internalID: 315478305923632438
+      spriteID: da8271d28bde77550800000000000000
+      internalID: 6158652390738700461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_8
+      name: knight_1_sprites_Sleep_8
       rect:
         serializedVersion: 2
         x: 0
@@ -305,20 +347,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12c48844dcf109730800000000000000
-      internalID: 4003735035210910753
+      spriteID: 612c24a759f422610800000000000000
+      internalID: 1594924721462493718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_9
+      name: knight_1_sprites_Sleep_9
       rect:
         serializedVersion: 2
         x: 40
@@ -326,20 +368,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d2ed269c069641e0800000000000000
-      internalID: -2213917186002656553
+      spriteID: 8fec5a3dc281fe470800000000000000
+      internalID: 8425980008641974008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_10
+      name: knight_1_sprites_Sleep_10
       rect:
         serializedVersion: 2
         x: 80
@@ -347,20 +389,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2776b664677365f0800000000000000
-      internalID: -764636238619183318
+      spriteID: 154d2f88894f30280800000000000000
+      internalID: -9078143487878966191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_11
+      name: knight_1_sprites_Sleep_11
       rect:
         serializedVersion: 2
         x: 120
@@ -368,20 +410,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dea1da9bb4e262170800000000000000
-      internalID: 8153255078173416173
+      spriteID: 29ab5b1508f283860800000000000000
+      internalID: 7509804606813485714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_12
+      name: knight_1_sprites_Sleep_12
       rect:
         serializedVersion: 2
         x: 0
@@ -389,20 +431,20 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 444d632d8acc77bb0800000000000000
-      internalID: -4938253440935078844
+      spriteID: ace3753baa04fc050800000000000000
+      internalID: 5822943945110798026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight_1_sprites_Attack_13
+      name: knight_1_sprites_Sleep_13
       rect:
         serializedVersion: 2
         x: 40
@@ -410,14 +452,14 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 691524aa82abd5cb0800000000000000
-      internalID: -4873534537927077482
+      spriteID: 021f0bcbb30335180800000000000000
+      internalID: -9127898986622947040
       vertices: []
       indices: 
       edges: []
@@ -432,7 +474,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures:
-    - texture: {fileID: 2800000, guid: c49dad6d133c99a44b37c2ef744738cf, type: 3}
+    - texture: {fileID: 2800000, guid: 5d82eb28bca19e44c8da7f0545549d77, type: 3}
       name: _Emission
   spritePackingTag: 
   pSDRemoveMatte: 0

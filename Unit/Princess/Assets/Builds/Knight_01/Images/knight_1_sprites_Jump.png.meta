@@ -1,16 +1,37 @@
 fileFormatVersion: 2
-guid: cfae720514c9e4b438df0f5856033c8a
+guid: 3f65f5e84caf5be4ab98603437ac4f4c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7303905716741223039
-    second: knight_1_sprites_Falling_0
+      213: -5112221358636416445
+    second: knight_1_sprites_Jump_0
   - first:
-      213: -1896590005073915161
-    second: knight_1_sprites_Falling_1
+      213: -1240519906823895076
+    second: knight_1_sprites_Jump_1
   - first:
-      213: 6945819033034354757
-    second: knight_1_sprites_Falling_2
+      213: -2773126405490869585
+    second: knight_1_sprites_Jump_2
+  - first:
+      213: -1744486248122491793
+    second: knight_1_sprites_Jump_3
+  - first:
+      213: 1552800890557520919
+    second: knight_1_sprites_Jump_4
+  - first:
+      213: 3650322485366375888
+    second: knight_1_sprites_Jump_0
+  - first:
+      213: -6274171337791874400
+    second: knight_1_sprites_Jump_1
+  - first:
+      213: 2584552653220619647
+    second: knight_1_sprites_Jump_2
+  - first:
+      213: 4830270400423991951
+    second: knight_1_sprites_Jump_3
+  - first:
+      213: 1447332066968994276
+    second: knight_1_sprites_Jump_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -96,7 +117,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: knight_1_sprites_Falling_0
+      name: knight_1_sprites_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d542efc5fc88a230800000000000000
+      internalID: 3650322485366375888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_1_sprites_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa5af6096aade8a0800000000000000
+      internalID: -6274171337791874400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_1_sprites_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 40
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75228ec1fc2ed320800000000000000
+      internalID: 2584552653220619647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_1_sprites_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 40
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a1b5a5651980340800000000000000
+      internalID: 4830270400423991951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_1_sprites_Jump_4
       rect:
         serializedVersion: 2
         x: 0
@@ -104,56 +209,14 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f723e473d8fac5560800000000000000
-      internalID: 7303905716741223039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: knight_1_sprites_Falling_1
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e2530f5075fda5e0800000000000000
-      internalID: -1896590005073915161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: knight_1_sprites_Falling_2
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 540f82a2c91846060800000000000000
-      internalID: 6945819033034354757
+      spriteID: 4e108bbb8d4f51410800000000000000
+      internalID: 1447332066968994276
       vertices: []
       indices: 
       edges: []
@@ -168,7 +231,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures:
-    - texture: {fileID: 2800000, guid: 4edadf13b64caec4f8c5a0bca0a7a3d4, type: 3}
+    - texture: {fileID: 2800000, guid: c9e879e1d0307bf45bd729eced29314a, type: 3}
       name: _Emission
   spritePackingTag: 
   pSDRemoveMatte: 0
