@@ -764,7 +764,43 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 0
     m_ControlPoints:
-    - position: {x: -200, y: -5, z: 0}
+    - position: {x: -242.9471, y: -12.973298, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
+      rightTangent: {x: 0, y: 0, z: 0}
+      mode: 0
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 1
+    - position: {x: -242.85274, y: 12.397516, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
+      rightTangent: {x: 0, y: 0, z: 0}
+      mode: 0
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 1
+    - position: {x: -221.43382, y: 12.616078, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
+      rightTangent: {x: 0, y: 0, z: 0}
+      mode: 0
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 1
+    - position: {x: -221.32455, y: -2.4645834, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
+      rightTangent: {x: 0, y: 0, z: 0}
+      mode: 0
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 1
+    - position: {x: -200, y: -2.573865, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -845,7 +881,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 1
-    - position: {x: 50, y: -5, z: 0}
+    - position: {x: 50, y: -11.552655, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -925,8 +961,8 @@ SpriteShapeRenderer:
   - {fileID: 0}
   - {fileID: 0}
   m_LocalAABB:
-    m_Center: {x: -75.000015, y: 0, z: -0.00035015}
-    m_Extent: {x: 126.000015, y: 6.000001, z: 0.00035015}
+    m_Center: {x: -96.471664, y: -0.18130112, z: -0.00055015}
+    m_Extent: {x: 147.47168, y: 13.787094, z: 0.00055015}
 --- !u!4 &660042114
 Transform:
   m_ObjectHideFlags: 0
@@ -957,8 +993,12 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -200.96802, y: -5.9680004}
-  - {x: -200.968, y: 5.9679995}
+  - {x: -243.91873, y: -13.946021}
+  - {x: -243.81718, y: 13.355729}
+  - {x: -220.47289, y: 13.593934}
+  - {x: -220.36353, y: -1.5014961}
+  - {x: -200.968, y: -1.6008916}
+  - {x: -200.968, y: 5.9680004}
   - {x: -190.3804, y: 5.967634}
   - {x: -187.2661, y: 5.873789}
   - {x: -187.0766, y: 5.8660903}
@@ -992,11 +1032,11 @@ EdgeCollider2D:
   - {x: 17.995342, y: 0.9610374}
   - {x: 32.755577, y: 0.9661751}
   - {x: 50, y: 0.96799994}
-  - {x: 50.968002, y: 0.00014491411}
-  - {x: 50.968002, y: -5.9680004}
-  - {x: -195.8403, y: -5.9680004}
-  - {x: -199, y: -5.9680004}
-  - {x: -200.96802, y: -5.9680004}
+  - {x: 50.968002, y: 0.000054904755}
+  - {x: 50.968002, y: -12.515972}
+  - {x: -238.98705, y: -13.922106}
+  - {x: -241.9338, y: -13.936396}
+  - {x: -243.91873, y: -13.946021}
 --- !u!1001 &786874013
 PrefabInstance:
   m_ObjectHideFlags: 0
