@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BatAttackController : MonoBehaviour
 {
-    public float AttackPower = 1f;
+    [SerializeField] private float attackPower = 1f;
         
     // when the GameObjects collider arrange for this GameObject to travel to the left of the screen
     void OnTriggerEnter2D(Collider2D col)
@@ -16,7 +16,7 @@ public class BatAttackController : MonoBehaviour
             
             HealthController hc = col.GetComponent<HealthController>();
             if (hc != null){
-                hc.Damage(AttackPower);
+                hc.Damage(attackPower);
             }
         }
     }

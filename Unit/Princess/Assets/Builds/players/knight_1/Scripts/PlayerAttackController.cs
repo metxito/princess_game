@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class PlayerAttackController : MonoBehaviour
 {
-    public EdgeCollider2D attackCollider;
-    public Animator animator;
-    public float force = 3f;
-    public float attackPower = 1f;
-    public ParticleSystem AttackEffect;
+    [SerializeField] private EdgeCollider2D attackCollider;
+    [SerializeField] private Animator animator;
+    [SerializeField] private float force = 3f;
+    [SerializeField] private float attackPower = 1f;
+    [SerializeField] private ParticleSystem AttackEffect;
 
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && !animator.GetBool("Falling") && !animator.GetBool("IsJumping"))
+        if (Input.GetButtonDown("Fire1") && !animator.GetBool("IsFalling") && !animator.GetBool("IsJumping"))
         {
             animator.SetTrigger("Attack");
         }
