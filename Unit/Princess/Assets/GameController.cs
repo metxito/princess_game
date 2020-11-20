@@ -4,12 +4,38 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] [Range(0.1f, 1.5f)] private float timeScale = 1f;
+    public static GameController main;
+    private float timeSlow = 0f;
+
+    [SerializeField] private float slowTime = 0.25f;
+
     private void Awake() {
-        Time.timeScale = timeScale;
+        main = this;
     }
 
     private void FixedUpdate() {
-        Time.timeScale = timeScale;
+        if (timeSlow > 0f){
+            timeSlow -= Time.fixedDeltaTime;
+            if (timeSlow <= 0f)
+                Time.timeScale = 1;
+        }
+    }
+
+    public void FreezeShort()
+    {
+        Time.timeScale = slowTime;
+        timeSlow = .2f;
+    }
+
+    public void FreezeMedium()
+    {
+        Time.timeScale = slowTime;
+        timeSlow = .4f;
+    }
+
+    public void FreezeLong()
+    {
+        Time.timeScale = slowTime;
+        timeSlow = .6f;
     }
 }

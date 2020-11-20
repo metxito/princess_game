@@ -30,12 +30,13 @@ public class PlayerAttackController : MonoBehaviour
                 Vector3 q = colPosition - this.transform.position;
                 
                 colPosition.z -= 2;
-                q.y = q.y / 3;
+                q.y = (q.y < 0f ? 0f : q.y);
                 
                 col.transform.Translate(q.normalized * force);
                 HealthIAController hc = col.GetComponent<HealthIAController>();
                 if (hc != null){
                     hc.Damage(attackPower);
+                    GameController.main.FreezeShort();
                 }
 
                 ParticleSystem ae = GameObject.Instantiate(AttackEffect, colPosition, col.transform.rotation);
