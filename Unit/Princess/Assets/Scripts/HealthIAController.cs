@@ -47,14 +47,13 @@ public class HealthIAController : MonoBehaviour
             m_characterController.ResetVelocity();
         }
 
-        Debug.Log(m_currentHealth);
 
         if (m_currentHealth <= 0f){
             m_currentHealth = 0f;
                 
             if (animator != null)
                 animator.SetBool("isDead", true);
-            Debug.Log("Dead");
+            Debug.Log("TODO: bat dead");
 
             return true;
         }

@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour, CharacterGeneralController
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (!animator.GetBool("IsFalling")){
+            if (!animator.GetBool("IsFalling") && !animator.GetBool("IsJumping")){
                 jump = true;
                 animator.SetBool("IsJumping", true);
                 animator.SetTrigger("Jump");

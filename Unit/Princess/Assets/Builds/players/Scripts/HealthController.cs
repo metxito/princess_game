@@ -52,11 +52,13 @@ public class HealthController : MonoBehaviour
 
         if (currentHealth <= 0f){
             if (animator != null)
-                animator.SetBool("isDead", true);
+                Debug.Log("TODO: is dead");
+                //animator.SetBool("isDead", true);
             return true;
         }
         else if (damageMaterial != null) {
             StartCoroutine("ShowDamage");
+            GameController.main.FreezeShort();
         }
 
         return false;

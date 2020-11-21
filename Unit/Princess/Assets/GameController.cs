@@ -5,37 +5,35 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public static GameController main;
-    private float timeSlow = 0f;
-
-    [SerializeField] private float slowTime = 0.25f;
+    [SerializeField] [Range(0.1f, 2f)] private float slowTime = 0.5f;
+    [SerializeField] [Range(0.1f, 2f)] private float lerpShort = .2f;
+    [SerializeField] [Range(0.1f, 2f)] private float lerpMedium = .1f;
+    [SerializeField] [Range(0.1f, 2f)] private float lerpLong = .05f;
+    private float lerp = 1f;
 
     private void Awake() {
         main = this;
     }
 
     private void FixedUpdate() {
-        if (timeSlow > 0f){
-            timeSlow -= Time.fixedDeltaTime;
-            if (timeSlow <= 0f)
-                Time.timeScale = 1;
-        }
+        Time.timeScale = Mathf.Lerp(Time.timeScale, 1f, lerp);
     }
 
     public void FreezeShort()
     {
         Time.timeScale = slowTime;
-        timeSlow = .2f;
+        lerp = lerpShort;
     }
 
     public void FreezeMedium()
     {
         Time.timeScale = slowTime;
-        timeSlow = .4f;
+        lerp = lerpMedium;
     }
 
     public void FreezeLong()
     {
         Time.timeScale = slowTime;
-        timeSlow = .6f;
+        lerp = lerpLong;
     }
 }

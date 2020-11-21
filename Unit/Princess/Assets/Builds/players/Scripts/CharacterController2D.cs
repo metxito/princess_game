@@ -26,7 +26,7 @@ public class CharacterController2D : MonoBehaviour
 
 
 	const float groundedRadius = .1f; // Radius of the overlap circle to determine if grounded
-	private bool grounded = false;            // Whether or not the player is grounded.
+	[SerializeField] private bool grounded = false;            // Whether or not the player is grounded.
 	const float ceilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
 	
 	private bool facingRight = true;  // For determining which way the player is currently facing.
@@ -38,6 +38,11 @@ public class CharacterController2D : MonoBehaviour
 
 
 
+
+	public bool isFacingRight()
+	{
+		return facingRight;
+	}
 
 
 	private void Awake()

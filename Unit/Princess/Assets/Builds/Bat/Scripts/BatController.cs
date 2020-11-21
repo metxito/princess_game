@@ -124,6 +124,5 @@ public class BatController : MonoBehaviour, CharacterGeneralController
 
     public void ResetVelocity(){
         currentVelocity = 0f;
-        Debug.Log("asdasd");
     }
 }
